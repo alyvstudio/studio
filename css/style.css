@@ -1,0 +1,397 @@
+.border-radius {
+  border-radius: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  padding: 32pt 32pt;
+  margin: auto;
+}
+
+.prd-container {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+*, *::before, *::after, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+  font-family: "Chocolates", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
+
+fieldset, h1, h2, h3, h4, h5, h6 {
+  color: #252525;
+}
+
+.hero, h1, h2, h3, h4, h5, h6 {
+  color: #252525;
+  font-weight: 700;
+  margin-bottom: 8pt;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 42px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.hl {
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  color: #007CEC;
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #4d4d4d;
+  margin-bottom: 8pt;
+}
+
+small {
+  display: block;
+  font-weight: 200;
+}
+
+h1 small {
+  font-size: 23px !important;
+}
+
+h2 small {
+  font-size: 20px !important;
+  line-height: 25px;
+}
+
+h3 small {
+  font-size: 17px !important;
+}
+
+h4 small {
+  font-size: 14px !important;
+}
+
+.button-group-flex {
+  display: flex;
+  -webkit-display: flex;
+  flex-position: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 9px 25px;
+  cursor: pointer;
+  background-color: #E0E0E0;
+  border: 1px solid #E0E0E0;
+  color: #9E9E9E;
+  border-radius: 3px;
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+.btn-icon a {
+  display: flex;
+  align-items: center;
+  color: #F5F5F5;
+}
+.btn-icon .feather {
+  height: 16px;
+}
+.btn-primary {
+  background-color: #8D1E61;
+  border-color: #8D1E61;
+  color: white;
+  transition: 0.3s all ease;
+}
+.btn-primary:hover {
+  background-color: #b7277e;
+  border-color: #b7277e;
+}
+.btn-primary:active {
+  background-color: #631544;
+}
+.btn-secondary {
+  background: none;
+  border-color: #0a0067;
+  color: #0a0067;
+}
+.btn-sidenav {
+  padding: 9px 9px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 22px;
+}
+
+.card {
+  width: 270px;
+  border-radius: 3px;
+  background: #F4F5F5;
+  margin: 25px auto;
+  align-self: flex-start !important;
+}
+.card-header {
+  width: 100%;
+}
+.card-header img {
+  display: block;
+  width: 100%;
+  padding: 20px;
+}
+.card-body {
+  display: block;
+  padding-left: 8pt;
+  padding-top: 8pt;
+  padding-right: 8pt;
+  padding-bottom: 8pt;
+}
+.card-footer {
+  padding-left: 8pt;
+  padding-top: 8pt;
+  padding-right: 8pt;
+  padding-bottom: 8pt;
+  display: block;
+}
+.card-table, .card tr, .card th, .card td {
+  width: 100%;
+}
+.card-table th, .card tr th, .card th th, .card td th {
+  text-align: left;
+  color: #252525;
+  font-weight: 500;
+  width: 50%;
+}
+.card-table td, .card tr td, .card th td, .card td td {
+  text-align: right;
+  color: #808080;
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 500px;
+  }
+  .card .btn {
+    display: inline-block;
+    width: 48% !important;
+  }
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
+.fieldset {
+  border: none;
+  padding: 8pt;
+  width: 600px;
+  margin: auto;
+}
+.fieldset .btn {
+  display: block;
+  margin-top: 8pt;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.legend {
+  font-size: 32px;
+  text-align: center;
+}
+
+.input {
+  border-radius: 3px;
+  border: 1px solid #E0E0E0;
+  font-size: 16px;
+  padding: 8pt;
+  display: block;
+  width: 100%;
+  caret-color: #0c0081;
+  color: #0c0081;
+  margin-top: 8pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 650px) {
+  .fieldset {
+    width: 400px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fieldset {
+    width: 300px;
+    margin: auto;
+  }
+  .fieldset .input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 20px) {
+  .fieldset {
+    width: 200px;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #F4F5F5;
+}
+.navbar .logo {
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.navbar .nav {
+  list-style: none;
+  display: flex;
+}
+.navbar .nav li {
+  display: inline-block;
+}
+.navbar .nav a {
+  display: block;
+  transition: 0.3s all ease;
+  color: #252525;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar .d-menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fieldset {
+    width: 300px;
+    margin: auto;
+  }
+  .fieldset .input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 20px) {
+  .fieldset {
+    width: 200px;
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #323232;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sidenav .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.sidenav .nav .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  font-size: 22px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  background: rgba(141, 30, 97, 0);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.sidenav a:hover {
+  background-color: #8D1E61;
+}
+.sidenav .close-btn {
+  position: absolute;
+  line-height: 0;
+  border-radius: 3px;
+  background-color: #3f3f3f;
+  top: 0;
+  right: 25px;
+  margin-top: 25px;
+  margin-left: 50px;
+  padding: 9px 9px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+.sidenav .close-btn:hover {
+  background-color: #8D1E61;
+}
+
+.spinner-animation {
+  animation-name: spin;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
