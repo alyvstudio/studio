@@ -38,7 +38,7 @@ function check_user($url) {
 	if (!isset($_SESSION['id_cliente'])) {
 		redir("?p=login&return=$url");
 	} else {
-
+		// ...
 	}
 }
 
@@ -57,7 +57,6 @@ function connect() {
 	$db_mysql = "webstore";
 
 	$mysqli = mysqli_connect($host_mysql, $user_mysql, $password_mysql, $db_mysql);
-
 	return $mysqli;
 }
 ?>

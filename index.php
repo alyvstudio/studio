@@ -40,7 +40,7 @@ if (!isset($p)) {
     <div class="navbar">
       <nav>
         <ul class="nav">
-          <li><a class="logo" href="index.html"><b>alyv</b> Studio</a></li>
+          <li><a class="logo" href="index.html"><b>alyv</b> Estudio</a></li>
         </ul>
       </nav>
       <nav>
