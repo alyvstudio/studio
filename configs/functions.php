@@ -16,13 +16,13 @@ function check_admin() {
 	}
 }
 
-function redir($var) {
+function redir($var){
 	?>
-<script>
-	window.location="<?=$var?>";
-</script>
-<?php
-die();
+	<script>
+		window.location="<?=$var?>";
+	</script>
+	<?php
+	die();
 }
 
 function alert($var) {
@@ -31,7 +31,7 @@ function alert($var) {
 		alert("<?=$var?>");
 	</script>
 	<?php
-die();
+	die();
 }
 
 function check_user($url) {

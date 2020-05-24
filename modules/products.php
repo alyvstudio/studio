@@ -2,16 +2,16 @@
 <?php
 check_user("products");
 
-if (isset($agregar) && ($cant)) {
+if (isset($agregar) && isset($cant)) {
 
 	$idp = clear($agregar);
-	$cant = clear($clear);
+	$cant = clear($cant);
 	$id_cliente = clear($_SESSION['id_cliente']);
 
 	// variable "$q" = variable "$mysqli" -> query (requiere o requerimiento) ("INSERTAR EN carro(tabla de la base de datos) valores ($tal, $tal)");
-	$q = $mysqli->query("INSERT INTO carro (id_cliente, id_producto, cantidad) VALUES($id_cliente, $idp, $cant)");
+	$q = $mysqli->query("INSERT INTO cart (id_client, id_product, cant) VALUES($id_cliente, $idp, $cant)");
 	alert("Se ha agregado al carro de compras");
-	redir("?p=products");
+	// redir("?p=products");
 }
 
 $q = $mysqli->query("SELECT * FROM products ORDER BY id DESC");
@@ -19,7 +19,10 @@ while ($r = mysqli_fetch_array($q)) {
 	?>
 
 		<div class="card">
-			<div class="card-header"><img src="productos/<?=$r['img']?>" width="200px" alt=""></div>
+			<div class="card-header">
+				<img src="productos/<?=$r['img']?>" width="200px" alt="">
+			</div>
+
 			<div class="card-body">
 				<h4><?=$r['name']?></h4>
 				<p><?=$r['descr']?></p>

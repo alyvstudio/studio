@@ -153,6 +153,42 @@ h4 small {
   font-size: 22px;
 }
 
+.btn-sidenav {
+  display: none;
+}
+.btn-sidenav .fa-ellipsis-v {
+  color: #8D1E61;
+}
+
+.no-line {
+  background: #050034 !important;
+  color: white;
+  transition: 0.3s ease;
+}
+.no-line:hover {
+  background: #0a0067 !important;
+}
+
+.close-btn {
+  position: absolute;
+  line-height: 0;
+  border-radius: 3px;
+  background-color: rgba(141, 30, 97, 0);
+  top: 0;
+  right: 25px;
+  margin-top: 25px;
+  margin-left: 50px;
+  padding: 9px 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 25px;
+  color: white;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  background-color: #8D1E61;
+}
+
 .card {
   width: 270px;
   border-radius: 3px;
@@ -220,7 +256,7 @@ h4 small {
 .fieldset {
   border: none;
   padding: 8pt;
-  width: 600px;
+  width: 500px;
   margin: auto;
 }
 .fieldset .btn {
@@ -242,32 +278,68 @@ h4 small {
   font-size: 16px;
   padding: 8pt;
   display: block;
-  width: 100%;
+  width: 100% !important;
   caret-color: #0c0081;
   color: #0c0081;
   margin-top: 8pt;
   margin-left: auto;
   margin-right: auto;
 }
+.input:focus {
+  outline: 1px solid #007CEC;
+}
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 504px) {
   .fieldset {
-    width: 400px;
-    margin: auto;
+    width: 450px !important;
   }
 }
-@media screen and (max-width: 600px) {
-  .fieldset {
-    width: 300px;
-    margin: auto;
-  }
-  .fieldset .input {
-    width: 100%;
-  }
+.jumbotron {
+  display: flex;
+  padding: 20px 30px;
+  align-items: center;
+  background: #8D1E61;
+  border-radius: 10px;
+  height: 500px;
 }
-@media screen and (max-width: 20px) {
-  .fieldset {
-    width: 200px;
+
+.jumbotron .jumbo-container {
+  width: 560px;
+}
+
+.jumbotron h1 {
+  font-size: 45pt;
+  margin-bottom: 8pt;
+  line-height: 40pt;
+}
+.jumbotron h1, 
+.jumbotron h2, 
+.jumbotron h3, 
+.jumbotron h4, 
+.jumbotron h5, 
+.jumbotron h6, 
+.jumbotron p, 
+.jumbotron th, 
+.jumbotron td, 
+.jumbotron table {
+  color: white;
+}
+.jumbotron .no-line {
+  background-color: white !important;
+  color: #050034 !important;
+  border-color: white !important;
+}
+.jumbotron .no-line:hover {
+  box-shadow: 0 1px 15px rgba(37, 37, 37, 0.6);
+}
+.jumbotron .no-line:active {
+  box-shadow: inset 0 1px 3px rgba(37, 37, 37, 0.6);
+  color: #8D1E61 !important;
+}
+
+@media screen and (max-width: 504px) {
+  .jumbotron .jumbo-container {
+    text-align: center;
   }
 }
 .navbar {
@@ -299,27 +371,21 @@ h4 small {
   padding: 10px 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .navbar .d-menu {
     display: none;
+  }
+
+  .btn-sidenav {
+    display: block;
   }
 
   .menu {
     display: block;
   }
-}
-@media screen and (max-width: 600px) {
-  .fieldset {
-    width: 300px;
-    margin: auto;
-  }
-  .fieldset .input {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 20px) {
-  .fieldset {
-    width: 200px;
+
+  .btn-login {
+    display: none;
   }
 }
 .sidenav {
@@ -361,24 +427,6 @@ h4 small {
 .sidenav a:hover {
   background-color: #8D1E61;
 }
-.sidenav .close-btn {
-  position: absolute;
-  line-height: 0;
-  border-radius: 3px;
-  background-color: #3f3f3f;
-  top: 0;
-  right: 25px;
-  margin-top: 25px;
-  margin-left: 50px;
-  padding: 9px 9px;
-  cursor: pointer;
-  border: none;
-  color: white;
-  transition: 0.3s;
-}
-.sidenav .close-btn:hover {
-  background-color: #8D1E61;
-}
 
 .spinner-animation {
   animation-name: spin;
@@ -395,3 +443,5 @@ h4 small {
     transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=style.css.map */

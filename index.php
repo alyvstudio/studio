@@ -22,62 +22,55 @@ if (!isset($p)) {
 	<script src="fontawesome/js/all.min.js"></script>
 </head>
 <body>
-	<!-- Navigation on the left side -->
 	<div class="sidenav" id="sidenav">
-    <button class="close-btn" href="javascript:void(0)" onclick="closeNav()"><span data-feather='x'></span></button>
+    <button class="close-btn" href="javascript:void(0)" onclick="closeNav()"><i class="fad fa-times"></i></button>
     <div class="nav">
       <div class="col">
-        <a href="?p=main">Inicio</a>
-        <a href="?p=products">Productos</a>
-        <a href="?p=our">Nosotros</a>
-				<a href="?p=contact">Contacto</a>
-				<a href="?p=admin">Administrador</a>
-      </div>
+      	<a href="?p=main">Inicio</a>
+      	<a href="?p=products">Productos</a>
+      	<a href="?p=services">Servicios</a>
+      	<a href="?p=projects">Proyectos</a>
+      	<a href="?p=about">Acerca de</a>
+      	<a href="?p=contact">Contacto</a>
+      	<a href="?p=admin">Administrador</a></div>
     </div>
   </div>
-  <!-- End of navigation on the left side -->
 
-
-	<div class="navbar">
-		<nav>
-			<ul class="nav">
-				<li><a href="?p=main" class="logo"><b>Alyv</b> Studio</a></li>
-			</ul>
-		</nav>
-		<nav>
-			<ul class="nav d-mwnu">
-				<li><a href="?p=main">Inicio</a></li>
-				<li><a href="?p=products">Productos</a></li>
-				<li><a href="?p=our">Nosotros</a></li>
-				<li><a href="?p=contact">Contacto</a></li>
-				<li><a href="?p=admin">Administrador</a></li>
-			</ul>
-		</nav>
-
-		<nav>
-			<style>
-				.username {
-					text-transform: uppercase;
-					font-weight: bold;
-				}
-			</style>
-			<button class="btn-sidenav" onclick="openNav()">&#9776;</button>
-			<ul class="nav d-menu">
-			<!-- Check if client is connected -->
+  <header>
+    <div class="navbar">
+      <nav>
+        <ul class="nav">
+          <li><a class="logo" href="index.html"><b>alyv</b> Studio</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="nav d-menu">
+        	<a href="?p=main">Inicio</a>
+	      	<a href="?p=products">Productos</a>
+	      	<a href="?p=services">Servicios</a>
+	      	<a href="?p=projects">Proyectos</a>
+	      	<a href="?p=about">Acerca de</a>
+	      	<a href="?p=contact">Contacto</a>
+	      	<a href="?p=admin">Administrador</a>
+        </ul>
+      </nav>
+      <!-- Check if client is connected -->
 			<?php
 				if (isset($_SESSION['id_cliente'])) {
 			?>
-				<button class="btn btn-primary" onclick="location.href='?p=salir'"><?=nombre_cliente($_SESSION['id_cliente'])?></button>
-				<!-- <li><a href="#" class="username"><?=nombre_cliente($_SESSION['id_cliente'])?></a></li>
-				<li><a href="?p=salir">Salir</a></li> kill session -->
+				<nav>
+					<ul class='nav'>
+						<a><?=nombre_cliente($_SESSION['id_cliente'])?></a>
+						<a href='?p=salir'>Salir</a>
+					</ul>
+				</nav>
 
 			<?php
-				}
+				} else { echo "<nav><ul class='nav'> <a href='?p=login'> Iniciar Sesión</a></ul></nav>"; }
 			?>
-			</ul>
-		</nav>
-		<!-- button class="btn btn-primary" onclick="location.href='?p=main'"><i data-feather="log-in"></i> Iniciar Sesión</button -->
-	</div>
+      <button class="btn btn-sidenav btn-icon" onclick="openNav()"><i class='far fa-ellipsis-v'></i></button>
+    </div>
+  </header>
 
 	<!-- contenido de la página -->
 	<div class="content">
@@ -100,7 +93,7 @@ if (!isset($p)) {
 		function openNav() {
         document.getElementById("sidenav").style.width = "100%";
     }
-    
+
     function closeNav() {
         document.getElementById("sidenav").style.width = "0px";
     }
